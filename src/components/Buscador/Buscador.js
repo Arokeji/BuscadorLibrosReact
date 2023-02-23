@@ -57,7 +57,7 @@ const Buscador = () => {
                             <tr key={book.id} className="books__row">
                                 <td className="books__field">{book.volumeInfo.authors === undefined ? "Autor desconocido" : book.volumeInfo.authors + " "}</td>
                                 <td className="books__field">{book.volumeInfo.title === undefined ? "Autor desconocido" : book.volumeInfo.title}</td>
-                                <td className="books__field">{book.volumeInfo.imageLinks ? "Sin imagen" : null /*<img src={book.volumeInfo.imageLinks.smallThumbnail} alt="Portada"/>*/}</td>
+                                <td className="books__field">{book.volumeInfo.imageLinks === undefined ? "Sin imagen" : <img src={book.volumeInfo.imageLinks.smallThumbnail} alt="Portada"/>}</td>
                             </tr>
                         ))
                     )}
